@@ -1,0 +1,1228 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Leather Kings Shoes</title>
+
+  <link rel="icon" type="image/x-icon" href="logo.png">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+<!--Google Anton font -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+<!--Google Roboto Mono font -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+<!-- FontAwesome CDN -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+<style>
+body {
+ background-image: url('back.jpg');
+ background-repeat: no-repeat;
+ background-attachment: fixed;
+ background-size: cover;
+}
+/* Background for mobile devices */
+@media (max-width: 768px) {
+  body {
+    background-image: url('backresponsive.jpg'); /* New image for mobile */
+    background-attachment: scroll; /* Fix the scrolling issue */
+    background-size: cover;
+    background-position: center center;
+  }
+}
+
+   /* Center Align Navbar */
+   .navbar {
+     background-color: #000000; /* Light background */
+     opacity: 0.6; /*background opacity */
+
+     height: 50px; /* Desired navbar height */
+     border: none; /* Remove default border */
+     display: flex; /* Use flexbox */
+     justify-content: center; /* Center align the content horizontally */
+     align-items: center; /* Center align the content vertically */
+     transition: top 0.3s ease-in-out; /* Smooth transition for navbar */
+   }
+
+   /* Navbar Links */
+   .navbar-nav {
+     display: flex; /* Ensure horizontal layout */
+     justify-content: center; /* Center the links */
+     align-items: center; /* Vertically align items */
+   }
+
+   .navbar-nav > li {
+     position: relative; /* For adding separators */
+   }
+
+   .navbar-nav > li > a {
+     padding: 0 30px; /* Adjust padding for spacing */
+     line-height: 60px; /* Match navbar height for vertical centering */
+     font-size: 20px; /* Font size for text */
+   }
+
+   .navbar .navbar-nav > li > a {
+     color: #f4f6f7; /* Your desired color */
+     text-decoration: none;
+     transition: color 0.3s ease; /* Smooth transition effect */
+     font-family: 'Courier New', monospace;
+   }
+   .navbar .navbar-nav > li > a:hover {
+  color: #d4ac0d; /* Change to this color on hover */
+  font-size: 21px;
+  transition: 0.3s ease-in-out;
+}
+
+   /* Add Separator */
+   .navbar-nav > li:not(:last-child)::after {
+     content: '';
+     position: absolute;
+     right: 0; /* Position separator at the right */
+     top: 50%;
+     transform: translateY(-50%);
+     height: 20px; /* Height of the separator */
+     width: 1px; /* Thickness of the separator */
+     background-color: #ddd; /* Separator color */
+   }
+
+   /* Navbar Hide/Show */
+   .navbar-disappear {
+     top: -60px; /* Hide the navbar */
+   }
+
+   .navbar-reappear {
+     top: 0; /* Show the navbar */
+   }
+   /* Default Navbar Styling for Large Screens (Desktop) */
+.navbar {
+  background-color: #000000;
+  opacity: 0.6;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: top 0.3s ease-in-out;
+}
+
+.navbar-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar-nav > li {
+  position: relative;
+}
+
+.navbar-nav > li > a {
+  padding: 0 30px;
+  line-height: 60px;
+  font-size: 20px;
+  color: #f4f6f7;
+  text-decoration: none;
+  font-family: 'Courier New', monospace;
+  transition: color 0.3s ease;
+}
+
+.navbar-nav > li:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 20px;
+  width: 1px;
+  background-color: #ddd;
+}
+
+/* Styling for Hover */
+.navbar .navbar-nav > li > a:hover {
+  color: #d4ac0d;
+  font-size: 21px;
+  transition: 0.3s ease-in-out;
+}
+
+/* Responsive Navbar for Smaller Screens (Mobile) */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column; /* Stack items vertically */
+    height: auto;
+    padding: 10px 0;
+  }
+
+  .navbar-nav {
+    flex-direction: column; /* Stack links vertically */
+    width: 100%;
+  }
+
+  .navbar-nav > li {
+    width: 100%; /* Full-width links */
+  }
+
+  .navbar-nav > li > a {
+    display: block;
+    padding: 10px 15px;
+    font-size: 18px;
+    text-align: center;
+    line-height: 1.5;
+    border-bottom: 1px solid #ddd;
+  }
+
+  /* Remove Separator for Mobile */
+  .navbar-nav > li:not(:last-child)::after {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar-nav > li > a {
+    font-size: 16px; /* Smaller font for very small screens */
+  }
+}
+
+   body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+    }
+    .hero {
+          min-height: 100vh;
+          background: url('hero-image.jpg') no-repeat center center/cover; /* Replace with your image */
+          color: white;
+          text-align: center;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+        }
+        .hero h1 {
+          font-size: 4em;
+          overflow: hidden; /* Hides overflowing text during animation */
+          white-space: nowrap;
+          border-right: 2px solid #007bff; /* Optional typing cursor effect */
+          width: 0; /* Start with no width */
+          animation: slideIn 3s steps(27, end) forwards, blink 0.3s step-end 3 alternate; /* 'forwards' keeps final state */
+          font-family: "Anton", sans-serif;
+          font-weight: 400;
+          font-style: normal;
+        }
+
+        /* Slide-in animation */
+        @keyframes slideIn {
+          from {
+            width: 0;
+          }
+          to {
+            width: 50%; /* Adjust to fit the text length */
+          }
+        }
+
+        /* Blinking cursor animation */
+        @keyframes blink {
+          50% {
+            border-color: transparent;
+          }
+        }
+
+        .hero h1.done {
+          border-color: transparent; /* Removes the cursor */
+        }
+
+        /* Responsive Styles */
+  @media (max-width: 768px) {
+    .hero h1 {
+      font-size: 3.5em; /* Smaller font size for tablets */
+      animation: slideIn 5s steps(27, end) forwards, blink 0.3s step-end 3 alternate; /* Adjust duration */
+    }
+    @keyframes slideIn {
+      from {
+        width: 0;
+      }
+      to {
+        width: 100%; /* Adjust to fit the text length */
+      }
+    }
+  }
+
+  @media (max-width: 480px) {
+    .hero {
+      padding: 10px; /* Reduce padding for smaller screens */
+    }
+
+    .hero h1 {
+      font-size: 1.5em; /* Smaller font size for phones */
+      line-height: 1.2; /* Add spacing between lines for readability */
+      word-break: break-word; /* Allow breaking of long words */
+      animation: slideIn 3s steps(27, end) forwards, blink 0.3s step-end 3 alternate; /* Adjust duration */
+    }
+    @keyframes slideIn {
+      from {
+        width: 0;
+      }
+      to {
+        width: 100%; /* Adjust to fit the text length */
+      }
+    }
+  }
+
+
+
+    section {
+      padding: 50px 0;
+    }
+    .about .logo {
+      text-align: center;
+    }
+    .about .logo img {
+      max-width: 100%;
+      height: auto;
+    }
+    .about{
+      background-color: #52be80;
+      min-height: 90vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      background-color: rgba(82, 190, 128, 0.5); /* Black with 50% opacity */
+      color: black; /* Text remains fully visible */
+      padding: 20px;
+      margin: 20px;
+      text-align: center;
+      font-size: 2rem;
+      font-family: Arial, sans-serif;
+    }
+    .about p{
+      text-align: left;
+    }
+    .about p ul{
+      text-align: left;
+    }
+   .about h2{
+     font-size: 4.5rem;
+     font-family: "Roboto Mono", monospace;
+ font-optical-sizing: auto;
+ font-weight: <weight>;
+ font-style: normal;
+   }
+   #about-animation span{
+     display: inline-block;
+      opacity: 0;
+      transform: translateY(100%);
+      transition: opacity 0.5s ease, transform 0.5s ease;
+    }
+
+    #about-animation span.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Media Queries for Smaller Screens */
+    @media screen and (max-width: 768px) {
+      .about h2 {
+        font-size: 6vw; /* Adjust for medium screens (tablets) */
+      }
+    }
+
+    @media screen and (max-width: 480px) {
+      .about h2 {
+        font-size: 8vw; /* Adjust for smaller screens (mobile) */
+      }
+    }
+
+   /*css for underline when hover*/
+   .about a{
+   --s: 0.1em;   /* the thickness of the line */
+     --c: #2c4bff; /* the color */
+     color: #0000;
+     padding-bottom: var(--s);
+     background:
+       linear-gradient(90deg,var(--c) 50%,#000 0) calc(100% - var(--_p,0%))/200% 100%,
+       linear-gradient(var(--c) 0 0) 0% 100%/var(--_p,0%) var(--s) no-repeat;
+     -webkit-background-clip: text,padding-box;
+             background-clip: text,padding-box;
+     transition: 0.5s;
+   }
+   .about a:hover {--_p: 100%}
+
+    .products{
+      background-color: #52be80;
+      min-height: 90vh;
+      display: flex;
+      align-items: center;
+      flex-direction: column; /* Stack elements vertically */
+  justify-content: flex-start; /* Align content to the top */
+      text-align: center;
+      background-color: rgba(82, 190, 128, 0.5); /* Black with 50% opacity */
+      color: black; /* Text remains fully visible */
+      padding: 20px;
+      margin: 20px;
+      text-align: center;
+      font-size: 2rem;
+      font-family: Arial, sans-serif;
+    }
+    .products h2 {
+      margin-top: 0; /* Ensure no extra margin at the top */
+      padding-bottom: 20px; /* Space between the heading and product cards */
+    }
+   .title-product {
+     font-size: 4.5rem;
+     font-family: "Roboto Mono", monospace;
+ font-optical-sizing: auto;
+ font-weight: <weight>;
+ font-style: normal;
+   }
+   .title-product span{
+     display: inline-block;
+      opacity: 0;
+      transform: translateY(100%);
+      transition: opacity 0.5s ease, transform 0.5s ease;
+    }
+
+    .title-product span.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Media Queries for Smaller Screens */
+@media screen and (max-width: 768px) {
+  .title-product {
+    font-size: 6vw; /* Adjust for medium screens (tablets) */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .title-product {
+    font-size: 8vw; /* Adjust for smaller screens (mobile) */
+  }
+}
+ .product-container {
+     position: relative;
+ }
+
+ .product-container .card {
+     position: relative;
+     width: 320px;
+     height: 450px;
+     background: #232323;
+     border-radius: 20px;
+     overflow: hidden;
+ }
+
+ .product-container .card:before {
+     content: "";
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     background: #1BBFE9;
+     clip-path: circle(150px at 80% 20%);
+     transition: 0.5s ease-in-out;
+ }
+
+ .product-container .card:hover:before {
+     clip-path: circle(300px at 80% -20%);
+ }
+
+ .product-container .card:after {
+     content: "";
+     position: absolute;
+     top: 30%;
+     left: -20%;
+     font-size: 12em;
+     font-weight: 800;
+     font-style: italic;
+     color: rgba(255, 255, 255, 0.04);
+
+ }
+
+ .product-container .card .imgBx {
+     position: absolute;
+     top: 50%;
+     transform: translateY(-50%);
+     z-index: 1000;
+     width: 100%;
+     height: 100%;
+     transition: .5s;
+ }
+
+ .product-container .card:hover .imgBx {
+     top: 0%;
+     transform: translateY(-25%);
+     /* bug  */
+ }
+
+ .product-container .card .imgBx img {
+     position: absolute;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%, -50%) rotate(20deg);
+     width: 270px;
+ }
+ /* Responsive Adjustments for images */
+
+ /* For tablets (screen width up to 1024px) */
+ @media screen and (max-width: 1024px) {
+     .product-container .card .imgBx img {
+         width: 230px; /* Slightly smaller images */
+     }
+ }
+
+ /* For smaller screens (screen width up to 768px) */
+ @media screen and (max-width: 768px) {
+     .product-container .card .imgBx img {
+         width: 200px; /* Further reduce size */
+     }
+ }
+
+ /* For mobile screens (screen width up to 480px) */
+ @media screen and (max-width: 480px) {
+     .product-container .card .imgBx img {
+         width: 170px; /* Smallest image size for mobile */
+     }
+ }
+ .product-container .card .contentBx {
+     position: absolute;
+     bottom: 0;
+     width: 100%;
+     height: 100px;
+     text-align: center;
+     transition: 1s;
+     z-index: 90;
+ }
+
+ .product-container .card:hover .contentBx {
+     height: 210px;
+ }
+
+ .product-container .card .contentBx h2 {
+     position: relative;
+     font-weight: 600;
+     letter-spacing: 1px;
+     color: #fff;
+ }
+
+ .product-container .card .contentBx .size,
+ .product-container .card .contentBx .color {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     padding: 8px 20px;
+     transition: .5s;
+     opacity: 0;
+     visibility: hidden;
+ }
+
+ .product-container .card:hover .contentBx .size {
+     opacity: 1;
+     visibility: visible;
+     transition-delay: .5s;
+ }
+
+ .product-container .card:hover .contentBx .color {
+     opacity: 1;
+     visibility: visible;
+     transition-delay: .6s;
+ }
+
+ .product-container .card .contentBx .size h3,
+ .product-container .card .contentBx .color h3 {
+     color: white;
+     font-weight: 300;
+     font-size: 14px;
+     text-transform: uppercase;
+     letter-spacing: 2px;
+     margin-right: 10px;
+ }
+
+ .product-container .card .contentBx .size span {
+     width: 26px;
+     height: 26px;
+     text-align: center;
+     line-height: 26px;
+     font-size: 14px;
+     display: inline-block;
+     color: #111;
+     background: #fff;
+     margin: 0 5px;
+     transition: .5s;
+     color: #111;
+     border-radius: 4px;
+     cursor: pointer;
+ }
+
+ .product-container .card .contentBx .size span:hover {  /* other bug */
+     background: #B90000;
+ }
+
+ .product-container .card .contentBx .color span {
+     width: 20px;
+     height: 20px;
+     background: #ff0;
+     border-radius: 50%;
+     margin: 0 5px;
+     cursor: pointer;
+ }
+
+ .product-container .card .contentBx .color span:nth-child(2) {
+      background: #1BBFE9;
+ }
+
+ .product-container .card .contentBx .color span:nth-child(3) {
+      background: #1B2FE9;
+ }
+
+ .product-container .card .contentBx .color span:nth-child(4) {
+      background: #080481;
+ }
+
+ .product-container .card .contentBx a {
+     display: inline-block;
+     padding: 10px 20px;
+     background: #fff;
+     border-radius: 4px;
+     margin-top: 10px;
+     text-decoration: none;
+     font-weight: 600;
+     color: #111;
+     opacity: 0;
+     transform: translateY(50px);
+     transition: .5s;
+ }
+
+ .product-container .card:hover .contentBx a {
+     opacity: 1;
+     transform: translateY(0px);
+     transition-delay: .7s;
+ }
+
+ .product-container .card .contentBx .info-btn {
+     display: inline-block;
+     padding: 10px 20px;
+     background: #fff;
+     border-radius: 4px;
+     margin-top: 10px;
+     text-decoration: none;
+     font-weight: 600;
+     color: #111;
+     opacity: 0;
+     transform: translateY(50px);
+     transition: 0.5s;
+ }
+
+
+ .product-container .card:hover .contentBx .info-btn {
+     opacity: 1;
+     transform: translateY(0px);
+     transition-delay: .7s;
+ }
+ .not-allowed {cursor: not-allowed;}
+ .info-btn {
+        display: inline-block;
+        margin-top: 10px;
+        padding: 10px 15px;
+        background-color: #52be80;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 14px;
+        transition: background-color 0.3s ease;
+    }
+
+    .info-btn:hover {
+        background-color: #3d8f62;
+    }
+    /* Responsively adjust the .card size */
+    @media screen and (max-width: 1024px) {
+        .product-container .card {
+            width: 280px;
+            height: 400px;
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        .product-container .card {
+            width: 250px;
+            height: 350px;
+        }
+    }
+
+    @media screen and (max-width: 480px) {
+        .product-container .card {
+            width: 220px;
+            height: 300px;
+        }
+    }
+
+    /* Popup Styling */
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; /* Ensure it appears above all other elements */
+}
+
+.popup.visible {
+    opacity: 1;
+    pointer-events: all;
+}
+
+/* Popup Content */
+.popup-content {
+    background-color: #fff;
+    opacity: 0.8;
+    padding: 20px;
+    border-radius: 10px;
+    width: 50%;
+    max-height: 80%;
+    z-index: 10000; /* Ensure the content appears on top of everything */
+    position: relative; /* Ensure the close button is inside the content box */
+    font-family: Arial, sans-serif;
+}
+
+/* Title */
+.popup h3 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Content text */
+.popup p {
+    font-size: 1.5rem;
+    line-height: 1.6;
+}
+
+/* Close Button Styling */
+.popup-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 2rem;
+    cursor: pointer;
+    color: #333; /* Set default color */
+    z-index: 10001; /* Ensure close button stays on top */
+}
+
+.popup-close:hover {
+    color: #900; /* Change to red on hover */
+}
+
+/* Active popup (when visible) */
+.popup.active {
+    display: flex;
+}
+    .close-btn {
+        position: absolute;
+        top: 10px;
+        right: 15px;
+        font-size: 1.5rem;
+        color: #333;
+        cursor: pointer;
+        transition: color 0.3s ease;
+    }
+
+    .close-btn:hover {
+        color: #900;
+    }
+    /* Adjust popup width for smaller screens */
+    @media screen and (max-width: 768px) {
+        .popup-content {
+            width: 80%; /* Use more width for tablets */
+        }
+    }
+
+    @media screen and (max-width: 480px) {
+        .popup-content {
+            width: 90%; /* Use more width for smaller screens */
+        }
+    }
+    /* Contact Us Section */
+    .contact-us {
+        background-color: rgba(28, 40, 51, 0.8); /* #1c2833 with 0.8 opacity */
+        color: #fff;
+        padding: 50px 20px;
+        text-align: center;
+
+    }
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 15px;
+    }
+
+    /* Contact Heading */
+    .text-center {
+        font-size: 4.5rem;
+        font-weight: bold;
+        margin-bottom: 30px;
+        font-family: "Roboto Mono", monospace;
+    }
+
+    /* CTA Styling */
+    .cta-container {
+        margin-bottom: 40px;
+    }
+
+    .cta-text {
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+        font-weight: 600;
+    }
+
+    .cta-buttons {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
+    }
+
+    .cta-button {
+        background-color: #fff;
+        color: #1c2833;
+        padding: 10px 20px;
+        border-radius: 5px;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 1.35rem;
+        transition: background-color 0.3s ease, color 0.3s ease;
+        width: 250px;
+        text-align: center;
+    }
+
+    .cta-button:hover {
+        background-color: #1c2833;
+        color: #fff;
+        border: 1px solid #fff;
+    }
+
+    /* General Footer Styling */
+footer {
+    background-color: #17202a;
+    color: white;
+    padding: 40px 20px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 30px; /* Space between links */
+    margin-bottom: 20px;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #DAA06D; /* Hover color */
+}
+
+.footer-socials {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Space between icons */
+}
+
+.social-icon img {
+    width: 30px;
+    height: auto;
+    transition: opacity 0.3s ease;
+}
+
+.social-icon img:hover {
+    opacity: 0.7; /* Hover effect for icons */
+}
+
+/* Mobile Responsive Design */
+@media (max-width: 768px) {
+    footer {
+        padding: 30px 10px;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .footer-socials {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .footer-links a,
+    .social-icon img {
+        font-size: 1rem;
+        width: 25px; /* Smaller icons on mobile */
+    }
+}
+
+.social-icon i {
+    font-size: 30px; /* Size of the icons */
+    color: white;
+    transition: opacity 0.3s ease;
+}
+
+.social-icon i:hover {
+    opacity: 0.7; /* Hover effect */
+}
+
+</style>
+</head>
+<body>
+  <nav class="navbar navbar-default navbar-fixed-top navbar-reappear">
+    <div class="container-fluid">
+      <ul class="nav navbar-nav">
+        <!-- All Links on the Left -->
+        <li><a href="#home">HOME</a></li>
+        <li><a href="#about">ABOUT</a></li>
+        <li><a href="#products">PRODUCTS</a></li>
+        <li><a href="#contact">CONTACT</a></li>
+      </ul>
+    </div>
+  </nav>
+
+<!-- Hero Section -->
+<div id="home" class="hero">
+  <h1>Step into Comfort and Style</h1>
+</div>
+
+<!-- About Section -->
+<section id="about" class="about">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-4 logo">
+        <img src="logo.png" alt="Brand Logo"> <!-- Replace with your logo -->
+      </div>
+      <div class="col-sm-8" style="border-top: 0.5px solid #fdfefe; border-bottom: 0.5px solid #fdfefe;">
+        <h2 id="about-animation"><b>About Us</b></h2>
+        <p>
+          Welcome to <strong>Leather Kings Shoes</strong>, where tradition meets innovation. We specialize in crafting premium quality leather shoes designed for style, comfort, and durability.
+      Based in <strong>Chakan</strong>, our manufacturing hub ensures every pair is made with precision and care, embodying the finest craftsmanship.
+        </p>
+        <p>Our Mission: At Leather Kings Shoes, our mission is to redefine comfort and durability in footwear by delivering high-quality
+          , stylish leather shoes at a cheaper price, that our customers can trust and cherish.</p>
+        <p>Our Vision: To become a trusted global name in premium leather footwear by blending innovation, tradition, and sustainability.</p>
+        <p>Why Choose Us?
+          <ul style="text-align: left;">
+          <li>Premium quality leather materials.</li>
+          <li>Expert craftsmanship ensuring comfort and durability.</li>
+          <li>A young, dynamic company with fresh ideas and a commitment to excellence.</li></ul></p>
+        <p>Our shoes are hand-stitched by skilled artisans using premium-grade leather, ensuring unmatched durability and comfort.</p>
+        <p>Ready to experience the perfect blend of style and comfort? Check out our <a  href="#products">Products</a> or <a href="#contact">Contact Us</a> today!</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Products Section -->
+<section id="products" class="products">
+  <div class="container">
+    <h2 id="about-animation" class="title-product">Our Products</h2>
+    <div class="row">
+      <!--First Product card -->
+      <div class="col-sm-4">
+        <div class="product-container">
+        <div class="card">
+            <div class="imgBx">
+                <img src="SAFETYSHOES-1.png" alt="nike-air-shoe">
+            </div>
+
+            <div class="contentBx">
+
+                <h2>Safety Shoes</h2>
+
+
+                <div class="size">
+                    <h3>Size :</h3>
+                    <span>6</span>
+                    <span>7</span>
+                    <span>8</span>
+                    <span>9</span>
+                    <span>10</span>
+                    <span>11</span>
+                </div>
+
+                <a href="#contact">Buy Now</a>
+
+                <!-- Info Button -->
+               <button class="info-btn" onclick="openPopup()">ℹ️ Info</button>
+            </div>
+        </div>
+    </div>
+      </div>
+
+      <!-- Info Pop-Up -->
+      <div id="info-popup" class="popup">
+          <div class="popup-content">
+              <span class="popup-close" onclick="closePopup()">×</span>
+              <h3>Our Premium Leather Safety Shoes</h3>
+              <p>
+                  Crafted from high-quality, real leather, our safety shoes are designed to offer both durability and comfort. Each pair is meticulously crafted using manual labor, which minimizes the use of machines, ensuring superior attention to detail and precision in every shoe. This traditional approach guarantees that every pair meets the highest standards of quality, with every stitch and cut carefully executed by skilled craftsmen.
+              </p>
+              <p>
+                  Leather shoes are known for their long-lasting durability and natural breathability, providing excellent protection and comfort for all-day wear. The strong, flexible material also resists wear and tear, making it ideal for challenging work environments. Additionally, leather has natural moisture-wicking properties, helping to keep your feet dry and comfortable, even during extended periods of use. These safety shoes are available in 6 different sizes to ensure the perfect fit for every individual. Designed specifically for men, they offer a stylish and functional solution for those seeking reliable, high-quality footwear for work and beyond.
+              </p>
+          </div>
+      </div>
+
+<!--Second Product card -->
+      <div class="col-sm-4">
+        <div class="product-container">
+        <div class="card">
+            <div class="imgBx">
+                <img src="sports-shoes.png" alt="nike-air-shoe">
+            </div>
+
+            <div class="contentBx">
+
+                <h2>Sports Shoes</h2>
+<!--
+                <div class="size">
+                    <h3>Size :</h3>
+                    <span>7</span>
+                    <span>8</span>
+                    <span>9</span>
+                    <span>10</span>
+                </div> -->
+
+                <a href="#" class="not-allowed">Coming Soon!</a>
+            </div>
+        </div>
+    </div>
+      </div>
+</div>
+
+
+<!--
+      <div class="col-sm-4">
+        <img src="product2.jpg" alt="Product 2" class="img-responsive">  Replace with product image
+        <h4>Product Name 2</h4>
+        <p>Short description of the product.</p>
+      </div>
+      <div class="col-sm-4">
+        <img src="product3.jpg" alt="Product 3" class="img-responsive">  Replace with product image
+        <h4>Product Name 3</h4>
+        <p>Short description of the product.</p>
+      </div>
+    -->
+    </div>
+  </div>
+</section>
+
+<!-- Contact Us Section -->
+<section class="contact-us" id="contact">
+  <div class="container">
+    <!-- Contact Heading -->
+    <h2 class="text-center">Contact</h2>
+
+    <!-- CTA Section -->
+    <div class="cta-container">
+      <p class="cta-text">Get in touch for your premium leather safety shoes</p>
+      <div class="cta-buttons">
+        <a href="mailto:your-email@example.com" class="cta-button">Contact Us via Email</a>
+        <a href="https://www.facebook.com/yourpage" class="cta-button" target="_blank">Contact Us on Facebook</a>
+        <a href="https://www.instagram.com/yourprofile" class="cta-button" target="_blank">Contact Us on Instagram</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer Section -->
+<footer>
+    <div class="footer-container">
+        <!-- Links Section -->
+        <div class="footer-links">
+            <a href="#about">About Us</a>
+            <a href="#products">Products</a>
+        </div>
+
+        <!-- Social Media Icons Section -->
+        <div class="footer-socials">
+            <a href="https://www.facebook.com/yourpage" target="_blank" class="social-icon">
+                <i class="fab fa-facebook"></i> <!-- Facebook Icon -->
+            </a>
+            <a href="https://www.instagram.com/yourprofile" target="_blank" class="social-icon">
+                <i class="fab fa-instagram"></i> <!-- Instagram Icon -->
+            </a>
+        </div>
+    </div>
+</footer>
+
+
+
+
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script>
+  let lastScrollTop = 0;
+  const navbar = document.querySelector('.navbar');
+
+  window.addEventListener('scroll', function () {
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+    if (scrollTop > lastScrollTop) {
+      // Scrolling down: hide navbar
+      navbar.classList.add('navbar-disappear');
+      navbar.classList.remove('navbar-reappear');
+    } else {
+      // Scrolling up: show navbar
+      navbar.classList.add('navbar-reappear');
+      navbar.classList.remove('navbar-disappear');
+    }
+
+    lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // For mobile scroll handling
+  });
+</script>
+
+<script>
+    // JavaScript to remove the cursor after the animation ends
+    const heroText = document.querySelector('.hero h1');
+    heroText.addEventListener('animationend', () => {
+      heroText.classList.add('done'); // Adds the class to hide the cursor
+    });
+  </script>
+
+  <script>
+      // JavaScript for dynamically wrapping letters in <span> for elements with the "about-animation" ID
+      const aboutAnimationElement = document.querySelector('#about-animation');
+      const letters = aboutAnimationElement.textContent.split(''); // Split text into individual letters
+      aboutAnimationElement.innerHTML = letters
+        .map((letter, index) =>
+          `<span style="--i:${index}">${letter === ' ' ? '&nbsp;' : letter}</span>`
+        )
+        .join('');
+
+      // Function to handle animations when the element is in view
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              // Add 'visible' class to animate letters
+              const spans = aboutAnimationElement.querySelectorAll('span');
+              spans.forEach((span, index) => {
+                setTimeout(() => {
+                  span.classList.add('visible');
+                }, 100 * index); // Delay for cascading effect
+              });
+            } else {
+              // Remove 'visible' class when the section is out of view
+              const spans = aboutAnimationElement.querySelectorAll('span');
+              spans.forEach((span) => {
+                span.classList.remove('visible');
+              });
+            }
+          });
+        },
+        {
+          threshold: 0.5, // Trigger when 50% of the section is visible
+        }
+      );
+
+      observer.observe(aboutAnimationElement);
+    </script>
+
+    <script>
+  // JavaScript for dynamically wrapping letters in <span> for elements with the "title-product" class
+  const titleProductElement = document.querySelector('.title-product');
+  const productLetters = titleProductElement.textContent.split(''); // Split text into individual letters
+  titleProductElement.innerHTML = productLetters
+    .map((letter, index) =>
+      `<span style="--i:${index}">${letter === ' ' ? '&nbsp;' : letter}</span>`
+    )
+    .join('');
+
+  // Function to handle animations when the element is in view
+  const observerProduct = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          // Add 'visible' class to animate letters
+          const spans = titleProductElement.querySelectorAll('span');
+          spans.forEach((span, index) => {
+            setTimeout(() => {
+              span.classList.add('visible');
+            }, 100 * index); // Delay for cascading effect
+          });
+        } else {
+          // Remove 'visible' class when the section is out of view
+          const spans = titleProductElement.querySelectorAll('span');
+          spans.forEach((span) => {
+            span.classList.remove('visible');
+          });
+        }
+      });
+    },
+    {
+      threshold: 0.5, // Trigger when 50% of the section is visible
+    }
+  );
+
+  observerProduct.observe(titleProductElement);
+</script>
+
+<!-- JavaScript for info pop-up -->
+<script>
+    // Function to open the pop-up
+    function openPopup() {
+        const popup = document.getElementById("info-popup");
+        popup.classList.add("active");
+
+        // Add event listener to close the popup when clicking outside
+   popup.addEventListener('click', closePopupOnClickOutside);
+    }
+
+    // Function to close the pop-up
+    function closePopup() {
+        const popup = document.getElementById("info-popup");
+        popup.classList.remove("active");
+
+        // Remove the event listener when the popup is closed
+    popup.removeEventListener('click', closePopupOnClickOutside);
+    }
+
+    // Function to close the popup if clicking outside the content
+function closePopupOnClickOutside(event) {
+    // Check if the click is outside the popup content
+    const popupContent = document.querySelector('.popup-content');
+    if (!popupContent.contains(event.target)) {
+        closePopup();
+      }
+}
+</script>
+</body>
+</html>

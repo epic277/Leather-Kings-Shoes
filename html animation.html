@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Letter Animation</title>
+  <style>
+    /* Styling for the container */
+    #about-animation {
+      text-align: center;
+      margin-top: 100px;
+    }
+
+    #about-animation h1 {
+      font-size: 3rem;
+      font-weight: bold;
+      display: inline-block;
+      overflow: hidden;
+    }
+
+    /* Styling for each animated letter */
+    #about-animation h1 span {
+      display: inline-block;
+      opacity: 0;
+      transform: translateY(100%);
+      animation: slideIn 0.5s ease forwards;
+      animation-delay: calc(0.1s * var(--i)); /* Cascading delay for each letter */
+    }
+
+    /* Keyframes for sliding effect */
+    @keyframes slideIn {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div id="about-animation">
+    <h1>About</h1>
+  </div>
+
+  <script>
+    // JavaScript for dynamically wrapping letters in <span> with cascading animation
+    const textElement = document.querySelector('#about-animation h1');
+    const letters = textElement.textContent.split(''); // Split text into letters
+    textElement.innerHTML = letters
+      .map((letter, index) =>
+        `<span style="--i:${index}">${letter === ' ' ? '&nbsp;' : letter}</span>`
+      )
+      .join('');
+  </script>
+</body>
+</html>
